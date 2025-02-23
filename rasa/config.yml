@@ -7,9 +7,9 @@ pipeline:
 - name: RegexFeaturizer          # Извлечение признаков с помощью регулярных выражений
 - name: LexicalSyntacticFeaturizer     # Лексико-синтаксический анализатор
 - name: CountVectorsFeaturizer       # Извлечение признаков по частоте слов
-  analyzer: "char_wb"           # Символьные N-граммы
+  analyzer: "word"           # Символьные N-граммы
   min_ngram: 1
-  max_ngram: 2               # Уменьшены размеры N-грамм для ускорения
+  max_ngram: 3               # Уменьшены размеры N-грамм для ускорения
 
 # Подключение предобученной модели трансформера (BERT)
 - name: "LanguageModelFeaturizer"
