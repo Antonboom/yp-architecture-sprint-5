@@ -7,6 +7,8 @@ stories:
       - action: utter_greet
       - intent: ask_architecture
       - action: utter_architecture_response
+      - intent: request_info
+      - action: utter_ask_more
 
   - story: goodbye
     steps:
@@ -15,5 +17,14 @@ stories:
 
   - story: ask for more info
     steps:
+      - intent: request_info
+      - action: utter_ask_more
+
+  - story: detailed architecture discussion
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
       - intent: request_info
       - action: utter_ask_more
