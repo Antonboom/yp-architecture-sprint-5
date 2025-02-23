@@ -20,3 +20,12 @@ rules:
     steps:
       - intent: request_info
       - action: utter_ask_more
+
+  - rule: Greet and ask architecture
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_architecture
+      - action: utter_architecture_response
+      - intent: request_info
+      - action: utter_ask_more
